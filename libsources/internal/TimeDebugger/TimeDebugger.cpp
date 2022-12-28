@@ -17,11 +17,9 @@ namespace debugTool
             elapsedMs = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
         }
 
-        std::ostream &TimeDebugger::operator<<(std::ostream &os)
+        void TimeDebugger::ToStream(std::ostream &os) const
         {
             os << elapsedMs << "ms";
-
-            return os;
         }
     }
 }

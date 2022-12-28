@@ -5,6 +5,7 @@
 
 namespace debugTool
 {
+
     class Debugger
     {
     public:

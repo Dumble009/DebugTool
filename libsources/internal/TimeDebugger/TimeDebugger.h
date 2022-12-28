@@ -6,7 +6,7 @@ namespace debugTool
 {
     namespace internal
     {
-        class TimeDebugger : InternalDebugger
+        class TimeDebugger : public InternalDebugger
         {
         private:
             // 計測開始時点を保持するための変数
@@ -18,7 +18,7 @@ namespace debugTool
         public:
             void Start() override;
             void Stop() override;
-            std::ostream &operator<<(std::ostream &os) override;
+            void ToStream(std::ostream &os) const override;
         };
     }
 }
