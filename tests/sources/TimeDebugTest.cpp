@@ -23,7 +23,7 @@ void CheckResult(const std::string &result, const std::string &debuggerName, int
     while (idx < (int)result.size())
     {
         char c = result[idx];
-        if (c < '0' && c > '9')
+        if (c < '0' || c > '9')
         {
             break;
         }
