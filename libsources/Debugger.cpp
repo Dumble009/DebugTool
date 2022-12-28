@@ -2,7 +2,7 @@
 
 namespace debugTool
 {
-    void Debugger::Start(const std::string &debuggerName)
+    void Debugger::Start(const std::string &debuggerName, int type)
     {
     }
 

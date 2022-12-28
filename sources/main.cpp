@@ -4,7 +4,7 @@
 int main(void)
 {
     std::cout << "test code start!" << std::endl;
-    debugTool::Debugger::Start("Debugger1");
+    debugTool::Debugger::Start("Debugger1", debugTool::DebugType::TIME);
     std::cout << debugTool::Debugger::Stop("Debugger1") << std::endl;
 
     std::cout << "test code finish!" << std::endl;
