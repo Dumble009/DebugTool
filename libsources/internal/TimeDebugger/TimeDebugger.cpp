@@ -14,7 +14,7 @@ namespace debugTool
         void TimeDebugger::Stop()
         {
             auto end = GET_NOW;
-            elapsedMs = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+            elapsedMs = (int)std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
         }
 
         void TimeDebugger::ToStream(std::ostream &os) const
