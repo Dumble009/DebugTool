@@ -25,6 +25,8 @@ target_include_directories(${ExecutableName} PUBLIC "${CMAKE_SOURCE_DIR}/sources
 target_link_directories(${ExecutableName} PUBLIC "C:/Program Files/Autodesk/FBX/FBX SDK/2020.3.2/lib/vs2019/x64/debug" "${CMAKE_SOURCE_DIR}/build")
 target_link_libraries(${ExecutableName} libfbxsdk DebugTool)
 
+add_subdirectory(libsources)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
