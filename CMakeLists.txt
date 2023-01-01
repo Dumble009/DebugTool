@@ -8,6 +8,8 @@ set(ExecutableName DebugToolTest)
 
 project(${ProjectName} VERSION 0.1.0)
 
+include("C:/MyLib/CMakeModules/deploy.cmake")
+
 enable_testing()
 add_subdirectory(tests)
 
@@ -25,13 +27,7 @@ target_include_directories(${ExecutableName} PUBLIC "${CMAKE_SOURCE_DIR}/sources
 target_link_directories(${ExecutableName} PUBLIC "C:/Program Files/Autodesk/FBX/FBX SDK/2020.3.2/lib/vs2019/x64/debug" "${CMAKE_SOURCE_DIR}/build")
 target_link_libraries(${ExecutableName} libfbxsdk DebugTool)
 
-set(LIB_FILE_NAME $<TARGET_FILE_NAME:${LibraryName}>)
-
-add_custom_command(
-    TARGET ${ProjectName}
-    POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:${LibraryName}> "C:/MyLib/DebugTool/lib/${LIB_FILE_NAME}"
-)
+deploy_lib("DebugTool" ${LibraryName} ${ProjectName})
 
 add_subdirectory(libsources)
 

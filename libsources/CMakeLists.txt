@@ -2,7 +2,7 @@
 
 project(copy_root)
 
-include(C:/MyLib/CMakeModules/deploy.cmake)
+#include(C:/MyLib/CMakeModules/deploy.cmake)
 
 file(GLOB HEADER_FILES "*.h")
 
