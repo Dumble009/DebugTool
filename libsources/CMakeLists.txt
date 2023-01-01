@@ -2,8 +2,6 @@
 
 project(copy_root)
 
-#include(C:/MyLib/CMakeModules/deploy.cmake)
-
 file(GLOB HEADER_FILES "*.h")
 
 message(STATUS "run root")
